@@ -1,0 +1,150 @@
+@keyframes sexy-shadow {
+    0% {
+        box-shadow: 0 0 10px #bbbbbb, 0 0 20px #ffffff;
+    }
+    100% {
+        box-shadow: 0 0 10px #ffffff, 0 0 20px #cccccc;
+    }
+}
+
+@keyframes sexy-button {
+    0% {
+        background-color: aliceblue;
+        color: #374151;
+    }
+    100% {
+        background-color: rgba(110, 110, 110, 0.1);
+        color: aliceblue;
+    }
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: opacity 1s ease-in-out, visibility 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+.boom {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 1s ease-in-out, visibility 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.welcome {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+}
+
+button {
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    animation: sexy-button 0.2s both;
+}
+
+input {
+    background-color: rgba(110, 110, 110, 0.1);
+    border: solid 1px aliceblue;
+    padding: 0px 20px;
+    border-radius: 5px;
+    height: 40px;
+    width: 135px;
+    font-size: 18px;
+    color: aliceblue;
+}
+input::placeholder {
+    color: aliceblue;
+}
+
+.login-box {
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px #555555, 0 0 15px #111111;
+    animation: sexy-shadow 1.2s infinite alternate-reverse;
+    border: rgba(255, 255, 255, 0.3) solid 1px;
+    border-radius: 2rem;
+    height: 150px;
+    width: 175px;
+    padding: 60px;
+    z-index: 0;
+}
+
+.login-box,
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.main-box,
+.login-box,
+.main-box form,
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#login,
+#logout,
+#to-do-btn {
+    background-color: aliceblue;
+    border: solid 1px aliceblue;
+    padding: 10px 60px;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.current-time {
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 800;
+}
+
+#weather {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+}
+ul {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    list-style: none;
+}
+ul li button {
+    font-size: 10px;
+    padding: 5px 7px;
+    opacity: 0.5;
+    background-color: #888888;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}

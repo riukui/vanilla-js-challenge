@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VanillaJS Challenge Assignment 10</title>
+</head>
+<body>
+    <div class="main hidden">
+        <div class="main-box">
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+        <span class="current-time">00:00:00</span>
+        <h2 class="welcome"></h2>
+        <form class="to-do-form" action="submit">
+            <input class="to-do" type="text" placeholder="Add your task ;-)" />
+            <ul class="to-do-list"></ul> 
+            <button id="to-do-btn">Add</button>
+            <button id="logout">Sign out</button>
+        </form>
+        </div>
+    </div>
+    <div class="login-box boom">
+        <form class="login-form" action="submit">
+        <input class="user-name" type="text" placeholder="Username" required />
+        <button id="login">Sign in</button>
+        </form>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    </body>
+</html>
